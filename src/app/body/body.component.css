@@ -4,6 +4,9 @@
     position: relative;
     left: 12%;
     width: 1150px;
+    min-height: 500px;
+    height: auto;
     background-color: #dcf1fc;
     box-shadow: 5px 5px 10px #888888;
+    margin-bottom: 50px;
 }

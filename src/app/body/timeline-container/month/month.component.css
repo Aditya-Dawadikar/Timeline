@@ -1,12 +1,12 @@
 .column {
     width: 200px;
-    min-height: 500px;
+    height: 100%;
 }
 
 .month {
     width: 200px;
     height: 50px;
-    background: linear-gradient(to bottom right, #b0e4ff, #62c8fc);
+    background: linear-gradient(to right, #21b3ff, #0684c7);
     padding: 10px;
     font-size: 24px;
     color: white;
@@ -22,5 +22,5 @@
 
 .body {
     background: linear-gradient(to bottom right, #dfeff7, #99a8b0);
-    height: 400px;
+    height: calc(100% - 100px);
 }

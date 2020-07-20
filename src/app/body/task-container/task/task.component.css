@@ -1,0 +1,23 @@
+.task {
+    width: 330px;
+    height: auto;
+    margin: 10px 10px 0 10px;
+    background-color: white;
+}
+
+.task-header {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px;
+}
+
+.sub-task-container {
+    width: 330px;
+    height: auto;
+    margin: 5px;
+    padding-bottom: 5px;
+}
+
+.ul {
+    list-style: none;
+}

@@ -1,4 +1,9 @@
+.month-container {
+    height: 100%;
+}
+
 .months {
     display: flex;
     list-style: none;
+    height: 100%;
 }

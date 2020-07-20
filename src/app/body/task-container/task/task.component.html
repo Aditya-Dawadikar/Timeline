@@ -1,0 +1,10 @@
+<div class="task">
+    <p class="task-header">{{task.taskName}}</p>
+    <div class="sub-task-container">
+        <ul class="ul">
+            <li *ngFor="let subtask of task.subtasks">
+                <app-subtask [subtask]=subtask.subtaskName [resonsible]=subtask.responsible></app-subtask>
+            </li>
+        </ul>
+    </div>
+</div>

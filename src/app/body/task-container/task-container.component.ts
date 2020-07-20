@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TASKS} from '../../shared/tasks';
 
 @Component({
   selector: 'app-task-container',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class TaskContainerComponent implements OnInit {
 
   constructor() { }
+
+  Tasks=TASKS;
 
   ngOnInit(): void {
   }

@@ -1,0 +1,24 @@
+.sub-task {
+    width: 100%;
+    min-height: 50px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.sub-task-unit {
+    width: 60%;
+    min-height: 50px;
+    background: linear-gradient(to bottom right, #91fad7, #31f77d);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.responsible {
+    width: 40%;
+    min-height: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 10px;
+}

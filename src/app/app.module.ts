@@ -9,6 +9,8 @@ import { TimelineContainerComponent } from './body/timeline-container/timeline-c
 import { TaskContainerComponent } from './body/task-container/task-container.component';
 import { MonthComponent } from './body/timeline-container/month/month.component';
 import { MonthContainerComponent } from './body/timeline-container/month-container/month-container.component';
+import { TaskComponent } from './body/task-container/task/task.component';
+import { SubtaskComponent } from './body/task-container/task/subtask/subtask.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MonthContainerComponent } from './body/timeline-container/month-contain
     TimelineContainerComponent,
     TaskContainerComponent,
     MonthComponent,
-    MonthContainerComponent
+    MonthContainerComponent,
+    TaskComponent,
+    SubtaskComponent
   ],
   imports: [
     BrowserModule,
