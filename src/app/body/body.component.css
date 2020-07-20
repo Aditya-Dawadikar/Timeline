@@ -1,0 +1,9 @@
+.body-container {
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+    left: 12%;
+    width: 1150px;
+    background-color: #dcf1fc;
+    box-shadow: 5px 5px 10px #888888;
+}

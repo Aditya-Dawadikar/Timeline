@@ -1,0 +1,4 @@
+.months {
+    display: flex;
+    list-style: none;
+}

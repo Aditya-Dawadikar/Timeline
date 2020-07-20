@@ -1,0 +1,26 @@
+.column {
+    width: 200px;
+    min-height: 500px;
+}
+
+.month {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to bottom right, #b0e4ff, #62c8fc);
+    padding: 10px;
+    font-size: 24px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.weeks {
+    width: 200px;
+    height: 50px;
+    background-color: #123c52;
+}
+
+.body {
+    background: linear-gradient(to bottom right, #dfeff7, #99a8b0);
+    height: 400px;
+}

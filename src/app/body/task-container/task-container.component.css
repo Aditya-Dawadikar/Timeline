@@ -1,0 +1,39 @@
+.task-container {
+    width: 350px;
+    height: 100%;
+    background-color: #68c2f2;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+.task {
+    width: 50%;
+    height: 100px;
+    background: linear-gradient(to right, #21b3ff, #0684c7);
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 9%;
+}
+
+.responsible {
+    width: 50%;
+    height: 100px;
+    background: linear-gradient(to right, #21b3ff, #0684c7);
+    font-size: 20px;
+    text-align: right;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 8%;
+}
