@@ -1,0 +1,54 @@
+.team {
+    width: 1250px;
+    min-height: 500px;
+    background-color: #dce8e6;
+    position: absolute;
+    z-index: 2;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.hide {
+    display: none;
+}
+
+.cancel {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.cancel-button {
+    width: 100%;
+    height: 100%;
+}
+
+.cancel-button:hover {
+    transform: scale(1.5);
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom right, #91fad7, #31f77d);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 20px;
+    padding: 12px;
+}
+
+.leader {
+    width: 500px;
+    height: 100px;
+    background-color: #99a8b0;
+    margin: 10px;
+}
+
+.members {
+    width: calc(100% - 20px);
+    min-height: 350px;
+    background-color: #99a8b0;
+    margin: 10px;
+}

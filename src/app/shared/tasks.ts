@@ -4,15 +4,21 @@ export const TASKS=[
     subtasks:[
       {
         subtaskName:"subtask1",
-        responsible:"person1"
+        responsible:"person1",
+        assignmentDate:"",
+        completionDate:""
       },
       {
         subtaskName:"subtask2",
-        responsible:"person2"
+        responsible:"person2",
+        assignmentDate:"",
+        completionDate:""
       },
       {
         subtaskName:"subtask3",
-        responsible:"person3"
+        responsible:"person3",
+        assignmentDate:"",
+        completionDate:""
       }
     ]
   },
@@ -21,19 +27,27 @@ export const TASKS=[
     subtasks:[
       {
         subtaskName:"subtask1",
-        responsible:"person1"
+        responsible:"person1",
+        assignmentDate:"",
+        completionDate:""
       },
       {
         subtaskName:"subtask2",
-        responsible:"person2"
+        responsible:"person2",
+        assignmentDate:"",
+        completionDate:""
       },
       {
         subtaskName:"subtask3",
-        responsible:"person3"
+        responsible:"person3",
+        assignmentDate:"",
+        completionDate:""
       },
       {
         subtaskName:"subtask4",
-        responsible:"person4"
+        responsible:"person4",
+        assignmentDate:"",
+        completionDate:""
       }
     ]
   },{
@@ -41,11 +55,15 @@ export const TASKS=[
     subtasks:[
       {
         subtaskName:"subtask1",
-        responsible:"person1"
+        responsible:"person1",
+        assignmentDate:"",
+        completionDate:""
       },
       {
         subtaskName:"subtask2",
-        responsible:"person2"
+        responsible:"person2",
+        assignmentDate:"",
+        completionDate:""
       }
     ]
   }

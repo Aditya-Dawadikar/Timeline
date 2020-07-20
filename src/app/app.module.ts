@@ -11,6 +11,10 @@ import { MonthComponent } from './body/timeline-container/month/month.component'
 import { MonthContainerComponent } from './body/timeline-container/month-container/month-container.component';
 import { TaskComponent } from './body/task-container/task/task.component';
 import { SubtaskComponent } from './body/task-container/task/subtask/subtask.component';
+import { SidebarComponent } from './body/sidebar/sidebar.component';
+import { AddTaskComponent } from './body/modals/add-task/add-task.component';
+import { AddMemberComponent } from './body/modals/add-member/add-member.component';
+import { TeamComponent } from './body/modals/team/team.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { SubtaskComponent } from './body/task-container/task/subtask/subtask.com
     MonthComponent,
     MonthContainerComponent,
     TaskComponent,
-    SubtaskComponent
+    SubtaskComponent,
+    SidebarComponent,
+    AddTaskComponent,
+    AddMemberComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
