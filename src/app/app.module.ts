@@ -15,6 +15,7 @@ import { SidebarComponent } from './body/sidebar/sidebar.component';
 import { AddTaskComponent } from './body/modals/add-task/add-task.component';
 import { AddMemberComponent } from './body/modals/add-member/add-member.component';
 import { TeamComponent } from './body/modals/team/team.component';
+import { MemberComponent } from './body/modals/team/member/member.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TeamComponent } from './body/modals/team/team.component';
     SidebarComponent,
     AddTaskComponent,
     AddMemberComponent,
-    TeamComponent
+    TeamComponent,
+    MemberComponent
   ],
   imports: [
     BrowserModule,

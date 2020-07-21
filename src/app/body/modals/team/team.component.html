@@ -4,7 +4,22 @@
         <img class="cancel-button" src="../../../../assets/close.svg" (click)="showTeam()">
     </div>
     <div class="body">
-        <div class="leader"></div>
-        <div class="members"></div>
+        <div class="members">
+            <ul style="list-style: none;margin-left:10px ;">
+                <li *ngFor="let member of col1">
+                    <app-member [member]=member></app-member>
+                </li>
+            </ul>
+            <ul style="list-style: none;">
+                <li *ngFor="let member of col2">
+                    <app-member [member]=member></app-member>
+                </li>
+            </ul>
+            <ul style="list-style: none;">
+                <li *ngFor="let member of col3">
+                    <app-member [member]=member></app-member>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
