@@ -10,14 +10,15 @@ export class SubtaskComponent implements OnInit {
   constructor() { }
 
   @Input() subtask;
-  @Input() resonsible;
-  @Input() status;
-  @Input() priority;
 
   @Output() deleteSubtask=new EventEmitter();
+  @Output() updateSubtask=new EventEmitter();
+
+  hide=true;
 
   ngOnInit(): void {
   }
 
   removeSubtask(){}
+
 }

@@ -11,7 +11,7 @@
     <div class="sub-task-container">
         <ul class="ul">
             <li *ngFor="let subtask of task.subtasks">
-                <app-subtask [subtask]=subtask.subtaskName [resonsible]=subtask.responsible [status]=subtask.status [priority]=subtask.priority (deleteSubtask)="removeSubtask(subtask)"></app-subtask>
+                <app-subtask [subtask]=subtask (deleteSubtask)="removeSubtask(subtask)" (updateSubtask)="updateSubtaskSection(subtask)"></app-subtask>
             </li>
         </ul>
     </div>

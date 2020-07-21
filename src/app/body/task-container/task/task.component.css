@@ -3,6 +3,7 @@
     height: auto;
     margin: 10px 10px 0 10px;
     background-color: white;
+    box-shadow: 2px 2px 2px #888888;
 }
 
 .task-header {

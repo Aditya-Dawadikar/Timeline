@@ -1,19 +1,18 @@
 <div class="subtask-container">
     <div class="sub-task">
-        <div class="sub-task-unit">{{subtask}}</div>
-        <div class="responsible">{{resonsible}}</div>
+        <div class="sub-task-unit">{{subtask.subtaskName}}</div>
+        <div class="responsible">{{subtask.responsible}}</div>
     </div>
     <div class="task-info">
         Status:
-        <div class="status" [ngClass]="{'complete':status === 'complete','incomplete':status==='incomplete','issues':status==='issues','inprogress':status==='inprogress'}">{{status}}</div>
+        <div class="status" [ngClass]="{'complete':subtask.status === 'complete','incomplete':subtask.status==='incomplete','issues':subtask.status==='issues','inprogress':subtask.status==='inprogress'}">{{subtask.status}}</div>
         Priority:
-        <div class="priority" [ngClass]="{'priority1':priority===1,'priority2':priority===2,'priority3':priority===3,'priority4':priority===4,'priority5':priority===5}"></div>
+        <div class="priority" [ngClass]="{'priority1':subtask.priority===1,'priority2':subtask.priority===2,'priority3':subtask.priority===3,'priority4':subtask.priority===4,'priority5':subtask.priority===5}"></div>
         <div class="update-icon">
-            <img class="update" src="../../../../../assets/edit.svg">
+            <img class="update" src="../../../../../assets/edit.svg" (click)="updateSubtask.emit()">
         </div>
         <div class="cancel">
             <img class="cancel-button" src="../../../../../assets/close.svg" (click)="deleteSubtask.emit()">
         </div>
     </div>
-
 </div>

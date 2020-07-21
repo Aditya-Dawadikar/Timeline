@@ -37,4 +37,8 @@ export class TaskComponent implements OnInit {
     this.hide=!this.hide;
   }
 
+  updateSubtaskSection(){
+    console.log("updated");
+  }
+
 }
