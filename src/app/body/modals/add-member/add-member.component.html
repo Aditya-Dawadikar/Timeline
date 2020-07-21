@@ -4,6 +4,22 @@
         <img class="cancel-button" src="../../../../assets/close.svg" (click)="addMember()">
     </div>
     <div class="body">
-
+        <form>
+            <div class="form-component">
+                <label class="label" #member>Name</label>
+                <input type="text" class="input">
+            </div>
+            <br>
+            <div class="form-component">
+                <label class="label">Assign Task</label>
+                <select name="select" class="select" #select>
+                  <option value="option1">option1</option>
+                  <option value="option1">option2</option>
+                  <option value="option1">option3</option>
+                  <option value="option1">option4</option>
+                </select>
+            </div>
+            <button class="submit">Add Task</button>
+        </form>
     </div>
 </div>

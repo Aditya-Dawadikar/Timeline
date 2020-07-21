@@ -14,4 +14,12 @@ export class TaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  removeTask(){
+
+  }
+
+  addSubtask(){
+
+  }
+
 }

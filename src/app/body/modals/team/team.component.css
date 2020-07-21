@@ -1,10 +1,12 @@
 .team {
-    width: 1250px;
+    width: 1150px;
     min-height: 500px;
     background-color: #dce8e6;
     position: absolute;
     z-index: 2;
     box-shadow: 5px 5px 10px #888888;
+    left: 100px;
+    top: 100px;
 }
 
 .hide {

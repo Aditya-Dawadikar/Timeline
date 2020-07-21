@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SidebarButtonsService} from '../../../services/sidebar-buttons.service';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-team',

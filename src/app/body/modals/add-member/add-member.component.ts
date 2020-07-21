@@ -19,6 +19,7 @@ export class AddMemberComponent implements OnInit {
   }
 
   hide=true;
+
   addMember(){
     this.hide=!this.hide;
   }

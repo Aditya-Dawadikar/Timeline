@@ -19,6 +19,7 @@ export class AddTaskComponent implements OnInit {
   }
 
   hide=true;
+
   addTask(){
     this.hide=!this.hide;
   }

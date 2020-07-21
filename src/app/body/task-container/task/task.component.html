@@ -1,6 +1,11 @@
 <div class="task">
-    <div class="cancel">
-        <img class="cancel-button" src="../../../../assets/close.svg">
+    <div class="icons">
+        <div class="cancel">
+            <img class="cancel-button" src="../../../../assets/close.svg" (click)="removeTask()">
+        </div>
+        <div class="add-sub-task">
+            <img src="../../../../assets/edit.svg" class="icon-mini" (click)="addSubtask()">
+        </div>
     </div>
     <p class="task-header">{{task.taskName}}</p>
     <div class="sub-task-container">

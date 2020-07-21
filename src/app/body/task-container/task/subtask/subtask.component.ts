@@ -15,4 +15,8 @@ export class SubtaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  removeSubtask(){
+
+  }
+
 }
