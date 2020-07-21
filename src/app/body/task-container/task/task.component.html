@@ -4,14 +4,14 @@
             <img class="cancel-button" src="../../../../assets/close.svg" (click)="removeTaskEmitter.emit()">
         </div>
         <div class="add-sub-task">
-            <img src="../../../../assets/edit.svg" class="icon-mini" (click)="toggleNewSubtaskSection()">
+            <img src="../../../../assets/add.svg" class="icon-mini" (click)="toggleNewSubtaskSection()">
         </div>
     </div>
     <p class="task-header">{{task.taskName}}</p>
     <div class="sub-task-container">
         <ul class="ul">
             <li *ngFor="let subtask of task.subtasks">
-                <app-subtask [subtask]=subtask.subtaskName [resonsible]=subtask.responsible (deleteSubtask)="removeSubtask(subtask)"></app-subtask>
+                <app-subtask [subtask]=subtask.subtaskName [resonsible]=subtask.responsible [status]=subtask.status [priority]=subtask.priority (deleteSubtask)="removeSubtask(subtask)"></app-subtask>
             </li>
         </ul>
     </div>

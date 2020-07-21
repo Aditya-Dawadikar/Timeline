@@ -6,19 +6,25 @@ export const TASKS=[
         subtaskName:"subtask1",
         responsible:"person1",
         assignmentDate:"",
-        completionDate:""
+        completionDate:"",
+        status:"complete",
+        priority:1
       },
       {
         subtaskName:"subtask2",
         responsible:"person2",
         assignmentDate:"",
-        completionDate:""
+        completionDate:"",
+        status:"complete",
+        priority:3
       },
       {
         subtaskName:"subtask3",
         responsible:"person3",
         assignmentDate:"",
-        completionDate:""
+        completionDate:"",
+        status:"issues",
+        priority:5
       }
     ]
   },
@@ -29,25 +35,33 @@ export const TASKS=[
         subtaskName:"subtask1",
         responsible:"person1",
         assignmentDate:"",
-        completionDate:""
+        completionDate:"",
+        status:"inprogress",
+        priority:3
       },
       {
         subtaskName:"subtask2",
         responsible:"person2",
         assignmentDate:"",
-        completionDate:""
+        completionDate:"",
+        status:"issues",
+        priority:2
       },
       {
         subtaskName:"subtask3",
         responsible:"person3",
         assignmentDate:"",
-        completionDate:""
+        completionDate:"",
+        status:"inprogress",
+        priority:3
       },
       {
         subtaskName:"subtask4",
         responsible:"person4",
         assignmentDate:"",
-        completionDate:""
+        completionDate:"",
+        status:"inprogress",
+        priority:5
       }
     ]
   },{
@@ -57,13 +71,17 @@ export const TASKS=[
         subtaskName:"subtask1",
         responsible:"person1",
         assignmentDate:"",
-        completionDate:""
+        completionDate:"",
+        status:"incomplete",
+        priority:3
       },
       {
         subtaskName:"subtask2",
         responsible:"person2",
         assignmentDate:"",
-        completionDate:""
+        completionDate:"",
+        status:"incomplete",
+        priority:5
       }
     ]
   }

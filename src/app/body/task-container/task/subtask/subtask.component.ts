@@ -11,10 +11,10 @@ export class SubtaskComponent implements OnInit {
 
   @Input() subtask;
   @Input() resonsible;
+  @Input() status;
+  @Input() priority;
 
   @Output() deleteSubtask=new EventEmitter();
-
-  stask=this.subtask;
 
   ngOnInit(): void {
   }
