@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-task',
@@ -8,18 +8,33 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TaskComponent implements OnInit {
 
   @Input() task;
+  @Output() removeTaskEmitter=new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  removeTask(){
+  hide=true;
 
+  addSubtask(subtaskName,responsible,assignmentDate,completionDate){
+    let newSubtask={
+      subtaskName:subtaskName,
+      responsible:responsible,
+      assignmentDate:assignmentDate,
+      completionDate:completionDate
+    }
+    this.task.subtasks.push(newSubtask);
+    this.toggleNewSubtaskSection();
   }
 
-  addSubtask(){
+  removeSubtask(subtask){
+    let index=this.task.subtasks.indexOf(subtask);
+    this.task.subtasks.splice(index,1);
+  }
 
+  toggleNewSubtaskSection(){
+    this.hide=!this.hide;
   }
 
 }

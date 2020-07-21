@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SidebarButtonsService} from '../../../services/sidebar-buttons.service';
+import {TASKS} from '../../../shared/tasks';
 
 @Component({
   selector: 'app-add-task',
@@ -13,14 +14,24 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): void {
     this.componentService.componentServiceObservable$.subscribe((task)=>{
       if(task===1){
-        this.addTask();
+        this.addTaskView();
       }
     })
   }
 
   hide=true;
 
-  addTask(){
+  addTaskView(){
     this.hide=!this.hide;
   }
+
+  addTask(taskName:string,startDate,EndDate){
+    let newTask={
+      taskName:taskName,
+      subtasks:[]
+    }
+    TASKS.push(newTask);
+    this.addTaskView();
+  }
+
 }

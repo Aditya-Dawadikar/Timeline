@@ -15,4 +15,9 @@ export class TaskContainerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  removeTask(task){
+    let index= TASKS.indexOf(task);
+    TASKS.splice(index,1);
+  }
+
 }

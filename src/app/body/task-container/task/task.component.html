@@ -1,18 +1,46 @@
 <div class="task">
     <div class="icons">
         <div class="cancel">
-            <img class="cancel-button" src="../../../../assets/close.svg" (click)="removeTask()">
+            <img class="cancel-button" src="../../../../assets/close.svg" (click)="removeTaskEmitter.emit()">
         </div>
         <div class="add-sub-task">
-            <img src="../../../../assets/edit.svg" class="icon-mini" (click)="addSubtask()">
+            <img src="../../../../assets/edit.svg" class="icon-mini" (click)="toggleNewSubtaskSection()">
         </div>
     </div>
     <p class="task-header">{{task.taskName}}</p>
     <div class="sub-task-container">
         <ul class="ul">
             <li *ngFor="let subtask of task.subtasks">
-                <app-subtask [subtask]=subtask.subtaskName [resonsible]=subtask.responsible></app-subtask>
+                <app-subtask [subtask]=subtask.subtaskName [resonsible]=subtask.responsible (deleteSubtask)="removeSubtask(subtask)"></app-subtask>
             </li>
         </ul>
+    </div>
+
+    <div class="newtask-section" [ngClass]="{'hide':hide}">
+        <div class="cancel">
+            <img class="cancel-button" src="../../../../assets/close.svg" (click)="toggleNewSubtaskSection()">
+        </div>
+        <form>
+            <div class="form-component">
+                <label class="label">Name</label>
+                <input type="text" name="taskName" class="input" #taskName>
+            </div>
+            <br>
+            <div class="form-component">
+                <label class="label">Responsible person</label>
+                <input type="text" name="personName" class="input" #personName>
+            </div>
+            <br>
+            <div class="form-component">
+                <label class="label">Start Date</label>
+                <input type="Date" name="startDate" class="input" #startDate>
+            </div>
+            <br>
+            <div class="form-component">
+                <label class="label">End Date</label>
+                <input type="Date" name="endDate" class="input" #endDate>
+            </div>
+            <div class="submit" (click)="addSubtask(taskName.value,personName.value,startDate.value,endDate.value)">Add Task</div>
+        </form>
     </div>
 </div>
