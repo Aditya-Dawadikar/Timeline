@@ -8,11 +8,19 @@ import {Month} from '../../../../shared/month';
 })
 export class MonthComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+   }
 
   @Input() month:Month;
 
+  Weeks=[1,2,3,4,5];
   ngOnInit(): void {
+  }
+
+  displayWeeks(){
+    for(let i=1;i<=this.month.numberOfWeeks;i++){
+      this.Weeks.push(i);
+    }
   }
 
 }

@@ -8,7 +8,17 @@ import {YEAR} from '../../../shared/mock-year';
 })
 export class MonthContainerComponent implements OnInit {
 
-  constructor() {}
+  constructor() {
+    for(let i=0;i<12;i++){
+      let weekCount=this.weeksCount(2020,i+1);
+      if(weekCount>=5){
+        YEAR[i].numberOfWeeks=5;
+      }else{
+        YEAR[i].numberOfWeeks=weekCount;
+      }
+    }
+    console.log(YEAR);
+  }
 
   ngOnInit(): void {
   }

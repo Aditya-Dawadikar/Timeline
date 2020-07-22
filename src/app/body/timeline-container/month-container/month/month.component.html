@@ -2,6 +2,16 @@
     <div class="month">
         {{month.monthName}}
     </div>
-    <div class="weeks"></div>
-    <div class="body"></div>
+    <div class="weeks">
+        <ul style="list-style: none;font-family: Verdana, Geneva, Tahoma, sans-serif;color:white;display: flex;">
+            <li *ngFor="let day of Weeks" style="margin:5px 5px 5px 5px;padding:10px;background-color: black;">
+                {{day}}
+            </li>
+        </ul>
+    </div>
+    <div class="body">
+        <app-task-ref-timeline></app-task-ref-timeline>
+        <app-task-ref-timeline></app-task-ref-timeline>
+        <app-task-ref-timeline></app-task-ref-timeline>
+    </div>
 </div>

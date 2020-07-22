@@ -6,60 +6,72 @@ export const YEAR:Month[]=[
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:31
   },{
     monthName:"February",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:29
   },{
     monthName:"March",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:31
   },{
     monthName:"April",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:30
   },{
     monthName:"May",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:31
   },{
     monthName:"June",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:30
   },{
     monthName:"July",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:31
   },{
     monthName:"August",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:31
   },{
     monthName:"September",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:30
   },{
     monthName:"October",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:31
   },{
     monthName:"November",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:30
   },{
     monthName:"December",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
+    dayCount:31
   }
 ];

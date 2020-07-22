@@ -17,6 +17,7 @@ import { AddTaskComponent } from './body/modals/add-task/add-task.component';
 import { AddMemberComponent } from './body/modals/team/add-member/add-member.component';
 import { TeamComponent } from './body/modals/team/team.component';
 import { MemberComponent } from './body/modals/team/member/member.component';
+import { TaskRefTimelineComponent } from './body/timeline-container/month-container/month/task-ref-timeline/task-ref-timeline.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MemberComponent } from './body/modals/team/member/member.component';
     AddTaskComponent,
     AddMemberComponent,
     TeamComponent,
-    MemberComponent
+    MemberComponent,
+    TaskRefTimelineComponent
   ],
   imports: [
     BrowserModule,

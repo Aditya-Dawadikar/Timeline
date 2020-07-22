@@ -3,4 +3,5 @@ export interface Month{
   numberOfWeeks:number;
   startDay:string;
   endDay:string;
+  dayCount:number;
 }
