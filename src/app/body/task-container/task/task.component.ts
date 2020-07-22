@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter,ElementRef ,ViewChild} from '@angular/core';
+import {TimelineService} from '../../../services/timeline.service';
 
 @Component({
   selector: 'app-task',
@@ -7,12 +8,21 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TaskComponent implements OnInit {
 
+  @ViewChild('taskview') taskView:ElementRef;
+
   @Input() task;
   @Output() removeTaskEmitter=new EventEmitter();
 
-  constructor() { }
+  constructor(private timeline:TimelineService) { }
 
   ngOnInit(): void {
+  }
+
+  viewHeight;
+  ngAfterViewInit(){
+    this.viewHeight=this.taskView.nativeElement.offsetHeight;
+    this.timeline.sendHeight(this.viewHeight);
+    console.log("service methodcall")
   }
 
   hide=true;

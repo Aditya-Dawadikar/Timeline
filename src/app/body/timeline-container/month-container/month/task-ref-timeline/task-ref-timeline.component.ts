@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TimelineService} from '../../../../../services/timeline.service';
 
 @Component({
   selector: 'app-task-ref-timeline',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskRefTimelineComponent implements OnInit {
 
-  constructor() { }
+  constructor(private timeline:TimelineService) { }
 
   ngOnInit(): void {
+    this.timeline.timelineObservable$.subscribe((height)=>{
+      console.log("inside timeline");
+      this.height=height;
+      console.log(this.height);
+    })
   }
+
+  height;
 
 }

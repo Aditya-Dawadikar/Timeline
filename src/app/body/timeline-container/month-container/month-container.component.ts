@@ -17,7 +17,6 @@ export class MonthContainerComponent implements OnInit {
         YEAR[i].numberOfWeeks=weekCount;
       }
     }
-    console.log(YEAR);
   }
 
   ngOnInit(): void {
