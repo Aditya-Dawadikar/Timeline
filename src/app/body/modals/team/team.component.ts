@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {SidebarButtonsService} from '../../../services/sidebar-buttons.service';
 import {TeamService} from '../../../services/team.service';
-import {Member} from '../../../shared/member';
 
+import {Member} from '../../../shared/member';
 import {TEAM} from '../../../shared/team';
 
 @Component({
@@ -12,14 +12,17 @@ import {TEAM} from '../../../shared/team';
 })
 export class TeamComponent implements OnInit {
 
-  constructor(private componentService:SidebarButtonsService,private teamService:TeamService) { }
+  constructor(private componentService:SidebarButtonsService,private teamService:TeamService) {
+    this.showMembersView();
+   }
+
+   @Input() removeMember;
 
   ngOnInit(): void {
     //render the team window
     this.componentService.componentServiceObservable$.subscribe((team)=>{
       if(team===3){
         this.toggleTeam();
-        this.showMembersView();
       }
     });
 
@@ -27,9 +30,15 @@ export class TeamComponent implements OnInit {
     this.teamService.teamServiceObservable$.subscribe((newMember:Member)=>{
       TEAM.push(newMember);
       console.log(TEAM);
-      this.length2=TEAM.length;
+      let x=TEAM.length;
+      if(x%3==0){
+        this.col3.push(TEAM[x-1]);
+      }else if(x%3==1){
+        this.col1.push(TEAM[x-1]);
+      }else{
+        this.col2.push(TEAM[x-1]);
+      }
     })
-
   }
 
   Team=TEAM;
@@ -39,8 +48,6 @@ export class TeamComponent implements OnInit {
 
   hide=true;
   teamName="Team1";
-  length1=this.Team.length;
-  length2:number;
 
   toggleTeam(){
     this.hide=!this.hide;
@@ -74,4 +81,28 @@ export class TeamComponent implements OnInit {
     }
   }
 
+  removeMemberMethod(member){
+    console.log(member);
+    let index=this.Team.indexOf(member);
+    let f1:boolean;
+    let f2:boolean;
+    let f3:boolean;
+    f1=this.col1.includes(member);
+    f2=this.col2.includes(member);
+    f3=this.col3.includes(member);
+
+    if(f1){
+      let i=this.col1.indexOf(member);
+      this.col1.splice(i,1);
+    }else if(f2){
+      let i=this.col2.indexOf(member);
+      this.col2.splice(i,1);
+    }else if(f3){
+      let i=this.col3.indexOf(member);
+      this.col3.splice(i,1);
+    }
+
+    this.Team.splice(index,1);
+    console.log(this.Team);
+  }
 }

@@ -52,3 +52,21 @@
     margin: 10px;
     font-size: 15px;
 }
+
+.cancel {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+    left: 225px;
+}
+
+.cancel-button {
+    width: 100%;
+    height: 100%;
+    margin: 5px auto;
+}
+
+.cancel-button:hover {
+    transform: scale(1.5);
+}

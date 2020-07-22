@@ -4,6 +4,9 @@
             <img class="profile" src="../../../../../assets/user.svg">
         </div>
         <div class="name">{{member.name}}</div>
+        <div class="cancel">
+            <img class="cancel-button" src="../../../../../../assets/close.svg" (click)="removeMemberEvent.emit(member)">
+        </div>
     </div>
     <div class="body">
         <div class="row">

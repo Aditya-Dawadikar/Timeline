@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {SidebarButtonsService} from '../../../services/sidebar-buttons.service';
-import {TeamService} from '../../../services/team.service';
+import {SidebarButtonsService} from '../../../../services/sidebar-buttons.service';
+import {TeamService} from '../../../../services/team.service';
 
-import {TASKS} from '../../../shared/tasks';
+import {TASKS} from '../../../../shared/tasks';
 import { TEAM } from 'src/app/shared/team';
 
 @Component({

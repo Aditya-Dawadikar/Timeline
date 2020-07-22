@@ -7,17 +7,17 @@
         <div class="members">
             <ul style="list-style: none;margin-left:10px ;">
                 <li *ngFor="let member of col1">
-                    <app-member [member]=member></app-member>
+                    <app-member [member]=member (removeMemberEvent)="removeMemberMethod(member)"></app-member>
                 </li>
             </ul>
             <ul style="list-style: none;">
                 <li *ngFor="let member of col2">
-                    <app-member [member]=member></app-member>
+                    <app-member [member]=member (removeMemberEvent)="removeMemberMethod(member)"></app-member>
                 </li>
             </ul>
             <ul style="list-style: none;">
                 <li *ngFor="let member of col3">
-                    <app-member [member]=member></app-member>
+                    <app-member [member]=member (removeMemberEvent)="removeMemberMethod(member)"></app-member>
                 </li>
             </ul>
         </div>

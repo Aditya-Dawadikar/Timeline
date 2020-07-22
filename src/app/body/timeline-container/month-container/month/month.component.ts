@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Month} from '../../../../shared/month';
 
 @Component({
   selector: 'app-month',
@@ -9,7 +10,7 @@ export class MonthComponent implements OnInit {
 
   constructor() { }
 
-  @Input() month:string;
+  @Input() month:Month;
 
   ngOnInit(): void {
   }
