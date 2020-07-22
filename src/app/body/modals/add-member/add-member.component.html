@@ -1,25 +1,23 @@
 <div class="add-task" [ngClass]="{'hide':hide}">
     <div class="header">new member</div>
     <div class="cancel">
-        <img class="cancel-button" src="../../../../assets/close.svg" (click)="addMember()">
+        <img class="cancel-button" src="../../../../assets/close.svg" (click)="toggleMember()">
     </div>
     <div class="body">
         <form>
             <div class="form-component">
-                <label class="label" #member>Name</label>
-                <input type="text" class="input">
+                <label class="label">Name</label>
+                <input type="text" class="input" #member>
             </div>
             <br>
             <div class="form-component">
                 <label class="label">Assign Task</label>
                 <select name="select" class="select" #select>
-                  <option value="option1">option1</option>
-                  <option value="option1">option2</option>
-                  <option value="option1">option3</option>
-                  <option value="option1">option4</option>
+                  <option >select a task</option>
+                  <option *ngFor="let task of subtasks ">{{task.taskName}} : {{task.subtaskName}}</option>
                 </select>
             </div>
-            <button class="submit">Add Task</button>
+            <div class="submit" (click)="addNewMember(member.value,select.value)">Add Task</div>
         </form>
     </div>
 </div>
