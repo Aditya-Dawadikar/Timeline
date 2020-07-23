@@ -8,9 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class WeekComponent implements OnInit {
 
   constructor() { }
-  @Input() status:boolean;
-
-  active=status;
+  @Input() active;
   ngOnInit(): void {
   }
 

@@ -2,72 +2,84 @@ import {Month} from './month';
 
 export const YEAR:Month[]=[
   {
+    index:0,
     monthName:"January",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:31
   },{
+    index:1,
     monthName:"February",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:29
   },{
+    index:2,
     monthName:"March",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:31
   },{
+    index:3,
     monthName:"April",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:30
   },{
+    index:4,
     monthName:"May",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:31
   },{
+    index:5,
     monthName:"June",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:30
   },{
+    index:6,
     monthName:"July",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:31
   },{
+    index:7,
     monthName:"August",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:31
   },{
+    index:8,
     monthName:"September",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:30
   },{
+    index:9,
     monthName:"October",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:31
   },{
+    index:10,
     monthName:"November",
     numberOfWeeks:1,
     startDay:"",
     endDay:"",
     dayCount:30
   },{
+    index:11,
     monthName:"December",
     numberOfWeeks:1,
     startDay:"",

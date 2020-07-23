@@ -34,6 +34,8 @@ export class MonthComponent implements OnInit {
       }
     }, 1);
 
+
+
   }
 
   count=Heights.length;
