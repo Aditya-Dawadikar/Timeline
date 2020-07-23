@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {TimelineService} from '../../services/timeline.service';
+import {Heights} from '../../shared/heights';
 
 @Component({
   selector: 'app-timeline-container',
@@ -7,11 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimelineContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private timeline:TimelineService) { }
 
   ngOnInit(): void {
   }
 
+  ngAfterViewInit(){
+    this.timeline.timelineObservable$.subscribe((height)=>{
+      this.heights.push(height);
+      Heights.push(height);
+    })
+  }
 
-
+  heights=[];
 }

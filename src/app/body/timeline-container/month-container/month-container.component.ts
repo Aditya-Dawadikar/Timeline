@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {YEAR} from '../../../shared/mock-year';
 
 @Component({
@@ -20,6 +20,9 @@ export class MonthContainerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(){
   }
 
   Year=YEAR;

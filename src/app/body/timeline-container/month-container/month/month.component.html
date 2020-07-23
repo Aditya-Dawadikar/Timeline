@@ -10,8 +10,10 @@
         </ul>
     </div>
     <div class="body">
-        <app-task-ref-timeline></app-task-ref-timeline>
-        <app-task-ref-timeline></app-task-ref-timeline>
-        <app-task-ref-timeline></app-task-ref-timeline>
+        <ul style="list-style: none;">
+            <li *ngFor="let height of heights">
+                <app-task-ref-timeline [viewheight]='height'></app-task-ref-timeline>
+            </li>
+        </ul>
     </div>
 </div>

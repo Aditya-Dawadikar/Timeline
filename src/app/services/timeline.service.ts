@@ -10,8 +10,8 @@ export class TimelineService {
 
   constructor() { }
 
-  sendHeight(height){
+  sendHeight(height:number){
     this.timelineSubject.next(height);
-    console.log("inside service call");
   }
+
 }

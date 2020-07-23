@@ -22,5 +22,5 @@
 
 .body {
     background: linear-gradient(to bottom right, #dfeff7, #99a8b0);
-    height: calc(100% - 100px);
+    height: calc(100% - 110px);
 }

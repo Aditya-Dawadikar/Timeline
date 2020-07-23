@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Month} from '../../../../shared/month';
+import {Heights} from '../../../../shared/heights';
 
 @Component({
   selector: 'app-month',
@@ -16,6 +17,9 @@ export class MonthComponent implements OnInit {
   Weeks=[1,2,3,4,5];
   ngOnInit(): void {
   }
+
+  heights=Heights;
+  count=Heights.length;
 
   displayWeeks(){
     for(let i=1;i<=this.month.numberOfWeeks;i++){

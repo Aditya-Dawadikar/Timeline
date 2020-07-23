@@ -13,19 +13,23 @@ export class TaskComponent implements OnInit {
   @Input() task;
   @Output() removeTaskEmitter=new EventEmitter();
 
-  constructor(private timeline:TimelineService) { }
+  constructor(private timeline:TimelineService) {
+  }
 
   ngOnInit(): void {
   }
 
-  viewHeight;
+  viewHeight:number;
   ngAfterViewInit(){
     this.viewHeight=this.taskView.nativeElement.offsetHeight;
-    this.timeline.sendHeight(this.viewHeight);
-    console.log("service methodcall")
+    setTimeout(()=>{this.send()},1);
   }
 
   hide=true;
+
+  send(){
+    this.timeline.sendHeight(this.viewHeight);
+  }
 
   addSubtask(subtaskName,responsible,assignmentDate,completionDate){
     let newSubtask={
