@@ -1,2 +1,13 @@
 <div class="task-ref-time" [ngStyle]="{'height':viewheight+'px'}">
+    <ul style="list-style: none;padding-top: 20px;">
+        <li *ngFor="let subtask of task.subtasks">
+            <div class="subtask" style="height:95px;background-color:white;margin:10px 0px 20px 0px">
+                <ul style="list-style: none;display: flex;">
+                    <li *ngFor="let week of weeks">
+                        <app-week [status]=status></app-week>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TASKS} from '../../shared/tasks';
+import {Heights} from '../../shared/heights';
 
 @Component({
   selector: 'app-task-container',
@@ -18,6 +19,7 @@ export class TaskContainerComponent implements OnInit {
   removeTask(task){
     let index= TASKS.indexOf(task);
     TASKS.splice(index,1);
+    Heights.splice(index,1);
   }
 
 }

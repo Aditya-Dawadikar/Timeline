@@ -38,6 +38,8 @@ export class TaskComponent implements OnInit {
       assignmentDate:assignmentDate,
       completionDate:completionDate
     }
+    console.log(assignmentDate);
+    console.log(completionDate);
     this.task.subtasks.push(newSubtask);
     this.toggleNewSubtaskSection();
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Month} from '../../../../shared/month';
 import {Heights} from '../../../../shared/heights';
+import {TASKS} from '../../../../shared/tasks';
 
 @Component({
   selector: 'app-month',
@@ -19,6 +20,22 @@ export class MonthComponent implements OnInit {
   }
 
   heights=Heights;
+  tasks=TASKS;
+  objects=[];
+
+  ngAfterViewInit(){
+    setTimeout(() => {
+      for(let i=0;i<Heights.length;i++){
+        let newObj={
+          height:this.heights[i],
+          task:this.tasks[i]
+        }
+        this.objects.push(newObj);
+      }
+    }, 1);
+
+  }
+
   count=Heights.length;
 
   displayWeeks(){
