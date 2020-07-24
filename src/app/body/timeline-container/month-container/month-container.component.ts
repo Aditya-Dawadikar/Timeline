@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {YEAR} from '../../../shared/mock-year';
+import {TASKS} from '../../../shared/tasks';
+import { TaskComponent } from '../../task-container/task/task.component';
 
 @Component({
   selector: 'app-month-container',
@@ -9,6 +11,7 @@ import {YEAR} from '../../../shared/mock-year';
 export class MonthContainerComponent implements OnInit {
 
   constructor() {
+    this.monthActivationLogic();
     for(let i=0;i<12;i++){
       let weekCount=this.weeksCount(2020,i+1);
       if(weekCount>=5){
@@ -42,4 +45,14 @@ export class MonthContainerComponent implements OnInit {
     return result + 1;
   };
 
+  monthActivationLogic(){
+    for(let i=0;i<TASKS.length;i++){
+        let startMonth=TASKS[i].subtasks[0].assignmentDate.getMonth();
+        let endMonth=TASKS[i].subtasks[(TASKS[i].subtasks.length-1)].completionDate.getMonth();
+        for(let j=startMonth;j<=endMonth;j++){
+          if(YEAR[i].active!=true)
+          YEAR[i].active=true;
+        }
+    }
+  }
 }

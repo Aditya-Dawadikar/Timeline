@@ -4,7 +4,7 @@
             <div class="subtask" style="height:95px;background-color:white;margin:10px 0px 20px 0px">
                 <ul style="list-style: none;display: flex;">
                     <li *ngFor="let week of weeks">
-                        <app-week [active]=status></app-week>
+                        <app-week [active]='week.active'></app-week>
                     </li>
                 </ul>
             </div>

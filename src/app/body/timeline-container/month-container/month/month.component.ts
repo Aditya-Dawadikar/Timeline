@@ -33,9 +33,6 @@ export class MonthComponent implements OnInit {
         this.objects.push(newObj);
       }
     }, 1);
-
-
-
   }
 
   count=Heights.length;

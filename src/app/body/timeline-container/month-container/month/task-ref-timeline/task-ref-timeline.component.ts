@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Heights } from 'src/app/shared/heights';
+import { WeekDay } from '@angular/common';
 
 @Component({
   selector: 'app-task-ref-timeline',
@@ -9,20 +10,37 @@ import { Heights } from 'src/app/shared/heights';
 export class TaskRefTimelineComponent implements OnInit {
 
   constructor() { }
+
   @Input() viewheight:number;
   @Input() task;
+  @Input() status;
 
-  status=true;
   startDate;
   endDate;
 
-  weeks=[1,2,3,4,5];
-  ngOnInit(): void {
+  weeks=[
+    {active:status},
+    {active:status},
+    {active:status},
+    {active:status},
+    {active:status}
+  ];
 
+  ngOnInit(): void {
+    /*if(this.status===true){
+      this.startDate=this.task.subtasks[0].assignmentDate.getDate();
+      this.endDate=this.task.subtasks[(this.task.subtasks.length)-1].completionDate.getDate();
+      for(let i=0;i<this.weeks.length;i++){
+        let mod1=this.startDate/7;
+        let mod2=this.endDate/7;
+        for(let j=mod1;j<=mod2;j++){
+          this.weeks[j].active=false;
+        }
+      }
+    }*/
   }
 
   ngAfterViewInit(){
-    this.startDate=this.task.subtasks[0].assignmentDate;
-    this.endDate=this.task.subtasks[(this.task.subtasks.length)-1].completionDate;
+
   }
 }

@@ -5,4 +5,5 @@ export interface Month{
   startDay:string;
   endDay:string;
   dayCount:number;
+  active:boolean;
 }
