@@ -12,7 +12,7 @@
     <div class="body">
         <ul style="list-style: none;">
             <li *ngFor="let object of objects">
-                <app-task-ref-timeline [viewheight]='object.height' [task]='object.task' [status]='month.active'></app-task-ref-timeline>
+                <app-task-ref-timeline [object]='object'></app-task-ref-timeline>
             </li>
         </ul>
     </div>

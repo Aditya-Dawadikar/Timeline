@@ -24,10 +24,6 @@ export class MonthContainerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  ngAfterViewInit(){
-  }
-
   Year=YEAR;
 
   weeksCount(year, month_number) {

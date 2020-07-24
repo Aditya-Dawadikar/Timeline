@@ -15,20 +15,23 @@ export class MonthComponent implements OnInit {
 
   @Input() month:Month;
 
-  Weeks=[1,2,3,4,5];
   ngOnInit(): void {
+    this.showWeek=this.month.active;
   }
 
   heights=Heights;
   tasks=TASKS;
   objects=[];
-
+  Weeks=[1,2,3,4,5];
+  //showWeek=true;
+  showWeek;
   ngAfterViewInit(){
     setTimeout(() => {
       for(let i=0;i<Heights.length;i++){
         let newObj={
           height:this.heights[i],
-          task:this.tasks[i]
+          task:this.tasks[i],
+          active:this.showWeek
         }
         this.objects.push(newObj);
       }
